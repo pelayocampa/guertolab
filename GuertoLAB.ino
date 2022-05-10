@@ -6,14 +6,14 @@ const int DHTPin = 15;
 
 // Variables para el control
 // Horas de luz
-float horas_luz;
+float horas_luz[3];
 
 DHT dht(DHTPin, DHTTYPE);
 
 void setup(){
   Serial.begin(9600);
   dht.begin();
-  horas_luz = 0;
+  reset_horas_luz();
 }
 
 void loop(){
@@ -28,8 +28,14 @@ void loop(){
   Serial.print("Humedad: ");
   Serial.print(h);
   Serial.print(" %\t");
-  Serial.print(" Temperature: ");
+  Serial.print(" Temperatura: ");
   Serial.print(t);
   Serial.println(" C");
   delay(30000);
+}
+
+void reset_horas_luz(){
+   for(int i=0;i<sizeof(horas_luz)/sizeof(horas_luz[0]);i++){
+    horas_luz[i]=0;
+  }
 }
