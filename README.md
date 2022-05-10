@@ -14,4 +14,5 @@ Se pretende construir un sistema de cultivo automatizado. Controlaremos la humed
 * LED en la parte superior del cultivo
 ## Roadmap
 
-Ahora mismo solamente está leyendo datos de un sensor DHT22 que controlará la humedad y la temperatura.
+* Leer datos ambientales.
+* 
