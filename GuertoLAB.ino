@@ -1,19 +1,16 @@
 #include "DHT.h"
+#include "zone.h"
 
 #define DHTTYPE DHT22
 
 const int DHTPin = 15;
 
-// Variables para el control
-// Horas de luz
-float horas_luz[3];
-
 DHT dht(DHTPin, DHTTYPE);
+Zone zone(10,10,10);
 
 void setup(){
   Serial.begin(9600);
   dht.begin();
-  reset_horas_luz();
 }
 
 void loop(){
@@ -32,10 +29,4 @@ void loop(){
   Serial.print(t);
   Serial.println(" C");
   delay(30000);
-}
-
-void reset_horas_luz(){
-   for(int i=0;i<sizeof(horas_luz)/sizeof(horas_luz[0]);i++){
-    horas_luz[i]=0;
-  }
 }
