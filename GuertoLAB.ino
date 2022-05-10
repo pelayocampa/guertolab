@@ -4,11 +4,16 @@
 
 const int DHTPin = 15;
 
+// Variables para el control
+// Horas de luz
+float horas_luz;
+
 DHT dht(DHTPin, DHTTYPE);
 
 void setup(){
   Serial.begin(9600);
   dht.begin();
+  horas_luz = 0;
 }
 
 void loop(){

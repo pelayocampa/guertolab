@@ -1,6 +1,6 @@
 # Güerto LAB
 
-Proyecto para el FabLAB Xixón durante el mes de Mayo.
+Proyecto para el FabLAB Gijón durante el mes de Mayo.
 
 ## Introducción:
 
